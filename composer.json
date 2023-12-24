@@ -2,7 +2,7 @@
     "name": "youcode/stadium-stream_mvc",
     "autoload": {
         "psr-4": {
-            "app\\": "database/",
+            "database\\": "database/",
             "MVC\\": "app/",
             "Routes\\": "Routes/"
         }

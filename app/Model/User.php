@@ -77,7 +77,7 @@ class User extends CrudAlias
         $this->id = $this->insert('users', ['name' => $this->name, 'email' => $this->email]);
     }
 
-    public function show(): object
+    public function show()
     {
         return $this->select('users', $this->id);
     }

@@ -16,10 +16,9 @@ class Route
     {
         $uri= $_SERVER['REQUEST_URI'] ?? '';
         $uri = explode('/', trim(strtolower($uri), '/'));
+        unset($uri[0]);
         if (!empty($uri[1])) {
-            //exm ==> $uri[1]=Home and controller ===> homeController pour send lien in controller
-            $controller = $uri[1] . 'controller';
-
+            $controller = ucwords($uri[1] ) . 'Controller';
             unset($uri[1]);
             $controller = "MVC\Controllers\\" . $controller;
             if (class_exists($controller)) {
@@ -48,7 +47,7 @@ class Route
         }
 
         if (isset($uri[3])) {
-            $this->params = array_values(array_slice($uri, 0));
+            $this->params = array_values($uri);
         }
 
         call_user_func_array([$objetController, $this->method], $this->params);

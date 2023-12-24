@@ -2,29 +2,34 @@
 
 namespace MVC\Model;
 
-use MVC\Model\Crud as CrudAlias;
-
-class Team extends CrudAlias
+class Team extends Crud
 {
     private string $name;
     private string $coach;
     private string $captain;
     private string  $formation;
-    private array $players = []; // Array to hold player objects
+    private array $players = [];
     private string $stadium;
     private string $founded;
 
-    public function __construct(string $name,string $captain , string $coach ,string $formation, string $stadium, array $players, string $founded)
+    public function selectallteam()
     {
-        $this -> name =$name;
-        $this -> captain = $captain;
-        $this -> coach = $coach;
-        $this -> formation = $formation;
-        $this -> stadium = $stadium;
-        $this -> players = $players;
-        $this -> founded = $founded;
+        return $this->select('teams');
     }
 
+    public function selectTeam($id)
+    {
+        return $this->select('teams', $id);
+    }
+
+    public function updateTeam($table,array $data,int $id){
+        
+        return $this->update($table, $id,$data);
+    }
+
+    public function deleteTeam($id){
+        return $this->delete("teams",$id);
+    }
     public function getName(): string
     {
         return $this->name;
@@ -94,7 +99,4 @@ class Team extends CrudAlias
     {
         $this->founded = $founded;
     }
-
-
-
 }
