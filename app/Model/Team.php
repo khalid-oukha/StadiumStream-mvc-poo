@@ -12,6 +12,9 @@ class Team extends Crud
     private string $stadium;
     private string $founded;
 
+    public function insertTeam($table,$data){
+        return $this->insert('teams',$data);
+    }
     public function selectallteam()
     {
         return $this->select('teams');
@@ -28,7 +31,7 @@ class Team extends Crud
     }
 
     public function deleteTeam($id){
-        return $this->delete("teams",$id);
+        return $this->delete('teams',$id);
     }
     public function getName(): string
     {

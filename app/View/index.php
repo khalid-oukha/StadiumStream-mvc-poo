@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Crud Operation Using PHP and MySQLi</title>
+    <title>Crud Operation Using mvc</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -23,11 +23,10 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-5">
-                            <h2>User <b>Management</b></h2>
+                            <h2>User<b>Management</b></h2>
                         </div>
                         <div class="col-sm-7" align="right">
-                            <a href="insert.php" class="btn btn-secondary"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
-
+                            <a href="Team/insertview" class="btn btn-secondary"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
                         </div>
                     </div>
                 </div>

@@ -21,6 +21,7 @@ class Route
             $controller = ucwords($uri[1] ) . 'Controller';
             unset($uri[1]);
             $controller = "MVC\Controllers\\" . $controller;
+            //$controller = MVC\CONTROLLERS\HomeController
             if (class_exists($controller)) {
                 $this->controller = $controller;
             } else {
@@ -29,8 +30,7 @@ class Route
             }
         }
 
-        $class = $this->controller;
-        $objetController = new $class;
+        $objetController = new $this->controller;
 
         if (isset($uri[2])) {
 
@@ -41,7 +41,6 @@ class Route
                 $this->method = $method;
             } else {
                 include '../app/View/error404.php';
-                // echo "error not fined";
                 exit;
             }
         }

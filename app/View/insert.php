@@ -28,26 +28,24 @@
 
 <body>
     <div class="signup-form">
-        <form action="../Update" method="POST">
+        <form action="/stadiumStream_MVC/Team/Insert" method="POST">
 
-            <h2>Update </h2>
-            <p class="hint-text">Update your info.</p>
+            <h2>TEAMS</h2>
+            <p class="hint-text">ADD NEW TEAM</p>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="name" value="<?php  echo $team['name'] ?>">
+                <input type="text" class="form-control" name="name" value="">
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="stadium" value="<?php  echo $team['stadium'] ?>">
+                <input type="text" class="form-control" name="stadium" value="">
             </div>
 
             <div class="form-group">
-                <input type="date" class="form-control" name="founded" value="<?php  echo $team['founded'] ?>">
+                <input type="date" class="form-control" name="founded" value="">
             </div>
-
-            <input type="hidden" name="id" value="<?php  echo $team['id'] ?>">
             <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg btn-block">Update</button>
+                <button type="submit" class="btn btn-success btn-lg btn-block">ADD</button>
             </div>
 			
         </form>
